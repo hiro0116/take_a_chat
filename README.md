@@ -3,6 +3,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|email|string|null: falise|
 |password|string|null: false|
 |icon|string||
 

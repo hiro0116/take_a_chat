@@ -1,0 +1,29 @@
+.side {
+  height: calc(100vh - 100px);
+  width: 300px;
+  background-color: white;
+  padding: 20px 10px;
+  &__groups {
+    height: 30px;
+    color: white;
+    background-color: #000088;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  &__group-name {
+
+  }
+  }
+  &__users {
+    height: 30px;
+    color: white;
+    background-color: #000088;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  &__user-name {
+
+  }
+  }
+}

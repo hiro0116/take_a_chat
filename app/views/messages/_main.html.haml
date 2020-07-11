@@ -1,0 +1,23 @@
+.main
+  .chat-log
+    %ul.chat
+      %li.chat__user 
+        bob
+      %li.chat__comment
+        hello
+      %li.chat__day
+        20200711
+
+    .chat
+      .chat__user 
+        tom
+      .chat__comment
+        hey
+      .chat__day
+        20200711
+  
+  .chat-form
+    = form_with html: {class: "form"}, local: true do |f|
+      .form__message
+        = f.text_field :content, class: "text"
+      = f.submit "送信", class: "send"

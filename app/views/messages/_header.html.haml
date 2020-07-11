@@ -1,0 +1,23 @@
+.header
+  .header__info
+    .header__info__user-icon
+      = icon('fas', 'user')
+    .header__info__user-name hiro
+
+  .header__search
+    %form{class: "search"}
+      %input{placeholder: "検索", class: "search__form" }
+      %input{type: "submit", value: "検索", class: "search__btn"}
+
+  .header__icons
+    = link_to "#", class: "header__icons__btn" do
+      = icon('far', 'folder-open')
+    = link_to "#", class: "header__icons__btn" do
+      = icon('fas', 'cog')
+
+
+
+
+
+
+
