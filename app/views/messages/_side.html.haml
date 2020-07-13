@@ -1,9 +1,13 @@
 .side
   .side__groups
     グループ
+    = link_to new_group_path, class: "member-add" do
+      = icon('fas', 'plus-square', class: 'addition')
   .side__group-name
     friends
   .side__users
     フレンド
+    = link_to "#", class: "member-add" do
+      = icon('fas', 'plus-square', class: 'addition')
   .side__user-name
     bob

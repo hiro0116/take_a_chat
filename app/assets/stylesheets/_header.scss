@@ -34,11 +34,14 @@
   }
 
   &__icons {
-    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__btn {
       text-decoration: none;
       padding-left: 20px;
       color: #444444;
+      font-size: 28px;
     }
   }
 }

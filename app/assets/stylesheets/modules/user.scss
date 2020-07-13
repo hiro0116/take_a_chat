@@ -1,0 +1,108 @@
+.AccountPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.AccountPage__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 20px 0;
+  h3 {
+    font-size: 25px;
+    padding: 0 40px;
+  }
+  .button {
+    font-size: 13px;
+    background-color: #000088;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+.AccountPage__form {
+  width: 50%;
+  text-align: center;
+  .update {
+    font-size: 13px;
+    background-color: #000088;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border: none;
+  }
+  .btn {
+    font-size: 13px;
+    background-color: #000088;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border: none;
+  }
+}
+
+.FormField {
+  margin-bottom: 10px;
+  &__label--normal {
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 200;
+    i {
+      font-size: 11px;
+    }
+    .field_with_errors {
+      display: inline-block;
+      color: #d65f4c;
+      font-weight: 400;
+    }
+  }
+  &__input--normal {
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px;
+      letter-spacing: 1px;
+    }
+    .field_with_errors {
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #d65f4c;
+      }
+    }
+  }
+}
+
+
+#error_explanation {
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+
+  ul {
+    margin: 0;
+    padding-left: 17px;
+    list-style: square;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+}
