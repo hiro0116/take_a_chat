@@ -1,0 +1,10 @@
+.chat
+  .chat__user 
+    = message.user.name
+  .chat__comment
+    - if message.text.present?
+      %p.message__text
+        = message.text
+    = image_tag message.image.url, class: 'message__image' if message.image.present?
+  .chat__day
+    = message.created_at.strftime("%H:%M")

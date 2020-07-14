@@ -1,23 +1,23 @@
 .main
-  .chat-log
-    %ul.chat
-      %li.chat__user 
-        bob
-      %li.chat__comment
-        hello
-      %li.chat__day
-        20200711
+  .chat-header
+    .chat-header__group
+      .chat-header__group__name
+        = @group.name
+      .chat-header__group__edit
+        = form_with model: [@group, @message], local: true do |f|
+          = f.label :image, class: "image-file" do
+            = icon('far', 'folder-open', class: "image")
+            %span 画像を選択
+            = f.file_field :image, class: "file"
+        = link_to edit_group_path(@group), class: "edit" do
+          = icon('fas', 'bars', class: "edit-btn")
+          グループ編集
 
-    .chat
-      .chat__user 
-        tom
-      .chat__comment
-        hey
-      .chat__day
-        20200711
+  .chat-log
+    = render @messages
   
   .chat-form
-    = form_with html: {class: "form"}, local: true do |f|
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form__message
-        = f.text_field :content, class: "text"
+        = f.text_field :text, class: "text"
       = f.submit "送信", class: "send"

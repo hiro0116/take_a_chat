@@ -2,30 +2,83 @@
   background-color: #eeeeee;
   width: calc(100vw - 300px);
   height: calc(100vh - 100px);
-  .chat-log {
-    height: calc(100vh - 200px);
-    width: 100%;
-    .chat {
+  .chat-header {
+    &__group {
+      height: 40px;
       display: flex;
-      margin-top: 20px;
-      &__user {
-        padding: 0 15px;
-        border: solid black 1px;
-        justify-content: center;
-        align-items: center;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 50px;
+      border-bottom: double #dddddd 3px;
+      &__name {
+        font-size: 25px;
       }
-      &__comment {
-        // width: 100%;
-        border: solid black 1px;
-        display: inline-block;
-        padding: 5px 20px;
+      &__edit {
+        color: #444444;
+        display: flex;
+        .image-file {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-right: 40px;
+          color: #444444;
+          text-decoration: none;
+          .image {
+            font-size: 23px;
+            padding-right: 5px;
+            span {
+              
+            }
+          }
+          .file {
+            display: none;
+          }
+        }
+        .edit {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-right: 40px;
+          color: #444444;
+          text-decoration: none;
+          .edit-btn {
+            font-size: 20px;
+            padding-right: 5px;
+          }
+        }
       }
-    .chat__day {
-      float: right;
-      display: flex;
-      text-align: center;
     }
   }
+  .chat-log {
+    height: calc(100vh - 240px);
+    width: 100%;
+    padding-top: 20px;
+    overflow: scroll;
+    .chat {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      &__user {
+        padding: 0 5px 0 15px;
+        font-size: 17px;
+      }
+      &__comment {
+        padding: 5px 20px;
+        background-color: #AEFFBD;
+        display: inline-block;
+        border-radius: 10px;
+        min-height:30px;
+        height:auto !important;
+        min-width: 1em;
+        width: auto !important;
+        .message__text {
+          font-size: 20px;
+        }
+      }
+      &__day {
+        font-size: 12px;
+      }
+    }
 
     .chat-my {
       display: flex;

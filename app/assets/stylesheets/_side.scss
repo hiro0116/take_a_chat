@@ -3,17 +3,34 @@
   width: 300px;
   background-color: white;
   padding: 20px 10px;
-  &__groups {
+  &__group-lists {
     height: 30px;
     color: white;
     background-color: #000088;
     display: flex;
     justify-content: center;
     align-items: center;
-  &__group-name {
+  }
+  &__groups {
+    padding-left: 25px;
+    height: 40%;
+    .side__group {
+      margin-top: 10px;
+      .group {
+        text-decoration: none;
+        color: black;
+        &__name {
+        font-size: 18px;
+        }
+        &__message {
+          font-size: 13px;
+        }
+      }
+    }
+  }
 
-  }
-  }
+
+
   &__users {
     height: 30px;
     color: white;
@@ -30,10 +47,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // position: relative;
     .addition {
       font-size: 18px;
       color: white;
       padding-left: 15px;
     }
+    // span {
+    //   position: absolute;
+    //   display: block;
+    //   width: 14em;
+    //   left: 100%;
+    //   transform: translateX(-50%);
+    //   bottom: 100%;
+    // }
   }
 }

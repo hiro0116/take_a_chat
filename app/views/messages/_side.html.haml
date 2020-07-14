@@ -1,10 +1,17 @@
 .side
-  .side__groups
+  .side__group-lists
     グループ
     = link_to new_group_path, class: "member-add" do
       = icon('fas', 'plus-square', class: 'addition')
-  .side__group-name
-    friends
+      -# %span メンバーを追加する
+  .side__groups
+    - current_user.groups.each do |group|
+      .side__group
+        = link_to group_messages_path(group), class: "group" do
+          .group__name
+            = group.name
+          .group__message
+            = group.show_last_message
   .side__users
     フレンド
     = link_to "#", class: "member-add" do

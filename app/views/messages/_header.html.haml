@@ -11,12 +11,12 @@
       %input{type: "submit", value: "検索", class: "search__btn"}
 
   .header__icons
-    = link_to "#", class: "header__icons__btn" do
-      = icon('far', 'folder-open')
     = link_to edit_user_path(current_user), class: "header__icons__btn" do
-      = icon('fas', 'cog')
+      = icon('fas', 'cog', class: "header-btn")
+      アカウント編集
     = link_to destroy_user_session_path, method: :delete, class: "header__icons__btn" do
-      =icon('fas', 'sign-out-alt')
+      =icon('fas', 'sign-out-alt', class: "header-btn")
+      ログアウト
 
 
 
