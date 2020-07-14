@@ -71,7 +71,7 @@
         height:auto !important;
         min-width: 1em;
         width: auto !important;
-        .message__text {
+        &__text {
           font-size: 20px;
         }
       }
