@@ -14,26 +14,6 @@
         font-size: 25px;
       }
       &__edit {
-        color: #444444;
-        display: flex;
-        .image-file {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding-right: 40px;
-          color: #444444;
-          text-decoration: none;
-          .image {
-            font-size: 23px;
-            padding-right: 5px;
-            span {
-              
-            }
-          }
-          .file {
-            display: none;
-          }
-        }
         .edit {
           display: flex;
           align-items: center;
@@ -57,9 +37,8 @@
     .chat {
       margin-bottom: 20px;
       display: flex;
-      align-items: center;
       &__user {
-        padding: 0 5px 0 15px;
+        padding: 5px 15px;
         font-size: 17px;
       }
       &__comment {
@@ -76,20 +55,12 @@
         }
       }
       &__day {
-        font-size: 12px;
-      }
-    }
-
-    .chat-my {
-      display: flex;
-      float: right;
-      border: solid black 1px;
-      width: 100%;
-      &__mychat {
-
-      }
-      &__myname {
-        padding: 0 15px;
+        display: flex;
+        flex-direction: column-reverse;
+        &__time {
+          font-size: 12px;
+          margin-left: 5px;
+        }
       }
     }
   }
@@ -104,6 +75,19 @@
     .form {
       display: flex;
       width: 100%;
+      .image-file {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        color: #444444;
+        text-decoration: none;
+        .image {
+          font-size: 30px;
+        }
+        .file {
+          display: none;
+        }
+      }
       &__message {
         margin-right: 30px;
         width: 100%;

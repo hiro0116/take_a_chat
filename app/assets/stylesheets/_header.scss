@@ -2,7 +2,7 @@
   height: 100px;
   width: 100%;
   background-color: white;
-  padding: 0 30px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,9 +11,6 @@
     font-size: 30px;
     &__user-icon{
       padding-right: 10px;
-    }
-    &__user-name {
-
     }
   }
 
@@ -40,7 +37,7 @@
     align-items: center;
     &__btn {
       text-decoration: none;
-      padding-left: 20px;
+      margin-left: 20px;
       color: #444444;
       display: flex;
       align-items: center;

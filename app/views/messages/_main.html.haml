@@ -4,7 +4,6 @@
       .chat-header__group__name
         = @group.name
       .chat-header__group__edit
-        
         = link_to edit_group_path(@group), class: "edit" do
           = icon('fas', 'bars', class: "edit-btn")
           グループ編集
@@ -14,6 +13,9 @@
   
   .chat-form
     = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+      = f.label :image, class: "image-file" do
+        = icon('far', 'folder-open', class: "image")
+        = f.file_field :image, class: "file"
       .form__message
         = f.text_field :text, class: "text"
       = f.submit "送信", class: "send"
