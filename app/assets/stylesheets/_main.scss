@@ -12,6 +12,20 @@
       border-bottom: double #dddddd 3px;
       &__name {
         font-size: 25px;
+        display: flex;
+        align-items: baseline;
+        .group__member {
+          display: flex;
+          font-size: 18px;
+          margin-left: 15px;
+          color: gray;
+          ul {
+            display: flex;
+            li {
+              margin: 0 5px;
+            }
+          }
+        }
       }
       &__edit {
         .edit {
@@ -83,6 +97,7 @@
         text-decoration: none;
         .image {
           font-size: 30px;
+          cursor: pointer;
         }
         .file {
           display: none;
@@ -101,6 +116,7 @@
         padding: 10px 15px;
         background-color: white;
         border: solid black 1px;
+        cursor: pointer;
       }
     }
   }

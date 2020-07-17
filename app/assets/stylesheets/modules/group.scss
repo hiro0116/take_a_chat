@@ -13,18 +13,6 @@ h2 {
   font-size: 14px;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-}
-
 .SettingGroupForm {
   width: 980px;
   margin: 60px auto;
@@ -50,8 +38,11 @@ li {
   &__main {
     width: 70%;
   }
+  &__show {
+    margin-right: 10px;
+  }
   &__label {
-    display: block;
+    display: inline-block;
     line-height: 50px;
     font-weight: bold;
   }
@@ -74,6 +65,16 @@ li {
     border: 1px solid #ddd;
     border-radius: 2px;
     text-align: center;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+    }
   }
 }
   .button {
@@ -92,14 +93,20 @@ li {
   border-bottom: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
-  &__button {
+  .member__button {
     display: inline-block;
     cursor: pointer;
   }
-  &__add {
-    color: #38aef0;
+  .member__add {
+    color: black;
   }
-  &__remove {
-    color: #f05050;
+  .member__remove {
+    color: black;
+  }
+}
+
+.ChatMembers {
+  p {
+
   }
 }
