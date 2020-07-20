@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: take_a_chat_production
-  username: take_a_chat
-  password: <%= ENV['TAKE_A_CHAT_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

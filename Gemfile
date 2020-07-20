@@ -36,6 +36,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -65,3 +66,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
+
+group :production do
+  gem 'pg'
+end
