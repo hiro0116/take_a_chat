@@ -49,8 +49,6 @@
     padding-top: 20px;
     overflow: scroll;
     .chat {
-      margin-bottom: 20px;
-      display: flex;
       &__user {
         padding: 5px 15px;
         font-size: 17px;
@@ -76,6 +74,35 @@
           margin-left: 5px;
         }
       }
+    }
+    .chat-current {
+      flex-direction: row-reverse;
+      &__user {
+        padding: 5px 15px;
+        font-size: 17px;
+      }
+      &__comment {
+        padding: 5px 20px;
+        background-color: #AEFFBD;
+        display: inline-block;
+        border-radius: 10px;
+        min-height:30px;
+        height:auto !important;
+        min-width: 1em;
+        width: auto !important;
+      }
+      &__day {
+        display: flex;
+        flex-direction: column-reverse;
+        &__time {
+          font-size: 12px;
+          margin-right: 5px;
+        }
+      }
+    }
+    li {
+      margin-bottom: 20px;
+      display: flex;
     }
   }
 

@@ -1,47 +1,47 @@
 $(function(){
   function buildHTML(message){
-    if (message.imga){
+    if (message.img){
       let html = `
-        <div class="chat" data-message-id=${message.id}>
-          <div class="chat__user">
-            ${message.user_name}
-          </div>
-          <div class="chat__comment">
-            <p class="chat__text">
-              ${message.text}
-            </p>
-            <img class="chat__image" src="${message.image}">
-          </div>
-          <div class="chat__day">
-            <div class="chat__day__time">
-              ${message.created_at}
-            </div>
-          </div>
-        </div>`
+            <li class="chat" data-message-id="${message.id}">
+              <div class="chat__user">
+                ${message.user_name}
+              </div>
+              <div class="chat__comment">
+                <p class="chat__text">
+                  ${message.text}
+                </p>
+                <img class="chat__image" src="${message.image}">
+              </div>
+              <div class="chat__day">
+                <div class="chat__day__time">
+                  ${message.created_at}
+                </div>
+              </div>
+            </li>`
     return html;
     } else {
       let html =`
-      <div class="chat" data-message-id=${message.id}>
-        <div class="chat__user">
-          ${message.user_name}
-        </div>
-        <div class="chat__comment">
-          <p class="chat__text">
-            ${message.text}
-          </p>
-        </div>
-        <div class="chat__day">
-          <div class="chat__day__time">
-            ${message.created_at}
-          </div>
-        </div>
-      </div>`
+            <li class="chat" data-message-id="${message.id}">
+              <div class="chat__user">
+                ${message.user_name}
+              </div>
+              <div class="chat__comment">
+                <p class="chat__text">
+                  ${message.text}
+                </p>
+              </div>
+              <div class="chat__day">
+                <div class="chat__day__time">
+                  ${message.created_at}
+                </div>
+              </div>
+            </li>`
     return html;
     }
   }
 
   let reloadMessages = function() {
-    let last_message_id = $('.chat:last').data("message-id") || 0;
+    let last_message_id = $('.chat:last').data("message-id") ||0;
     $.ajax({
       url: "api/messages",
       type: 'get',

@@ -12,9 +12,10 @@
             = group.name
           .group__message
             = group.show_last_message
-  .side__users
+  .side__user-lists
     フレンド
     = link_to "#", class: "member-add" do
       = icon('fas', 'plus-square', class: 'addition')
-  .side__user
+  .side__users
+    bob
     -# = render 'users/index'

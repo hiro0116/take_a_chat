@@ -13,7 +13,7 @@
   }
   &__groups {
     padding-left: 25px;
-    height: 40%;
+    min-height: 40%;
     .side__group {
       margin-top: 10px;
       .group {
@@ -31,7 +31,7 @@
 
 
 
-  &__users {
+  &__user-lists {
     height: 30px;
     color: white;
     background-color: #000088;
@@ -39,6 +39,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  &__users {
+    padding-left: 25px;
+    min-height: 40%;
   }
   .member-add {
     display: flex;
