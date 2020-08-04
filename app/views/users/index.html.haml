@@ -1,0 +1,7 @@
+.side__user-name
+  .user-friends
+    %h1 ユーザーを追加する
+    = link_to "トップページに戻る", :back, class: 'button'
+    .friend
+      - @users.each do |user|
+        = user.name
