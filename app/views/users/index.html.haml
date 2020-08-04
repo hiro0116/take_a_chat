@@ -1,0 +1,10 @@
+.user-addPage
+  .user-addPage__header
+    %h1 友達を追加する
+    = link_to "トップページに戻る", :back, class: 'button'
+  %ul.user-addPage__lists
+    - @users.each do |user|
+      %li.user-list
+        = user.name
+        .add-btn
+          = link_to "追加する", :back, class: "user-add"

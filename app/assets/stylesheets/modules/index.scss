@@ -1,0 +1,32 @@
+.user-addPage {
+  width: 980px;
+  margin: 60px auto;
+  padding: 40px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .user-list {
+      width: 50%;
+      padding: 0 30px;
+      line-height: 50px;
+      font-size: 14px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+    }
+    .add-btn {
+      .user-add {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
