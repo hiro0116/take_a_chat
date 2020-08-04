@@ -24,8 +24,9 @@
     }
     .add-btn {
       .user-add {
-        text-decoration: none;
+        display: inline;
         color: black;
+        cursor: pointer;
       }
     }
   }

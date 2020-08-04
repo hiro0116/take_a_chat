@@ -13,8 +13,8 @@
   }
   &__groups {
     padding-left: 25px;
-    height: 40%;
-    .side__group {
+    min-height: 40%;
+    .groups {
       margin-top: 10px;
       .group {
         text-decoration: none;
@@ -31,7 +31,7 @@
 
 
 
-  &__users {
+  &__user-lists {
     height: 30px;
     color: white;
     background-color: #000088;
@@ -40,6 +40,23 @@
     justify-content: center;
     align-items: center;
   }
+  &__users{
+    min-height: 40%;
+    .friends {
+      margin-top: 10px;
+      .friend {
+        text-decoration: none;
+        color: black;
+        &__name {
+          font-size: 18px;
+        }
+        &__message {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
   .member-add {
     display: flex;
     justify-content: center;

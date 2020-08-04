@@ -1,19 +1,32 @@
 class MessagesController < ApplicationController
   before_action :set_group
+  before_action :set_user
 
   def index
     @message = Message.new
-    @messages = @group.messages.includes(:user)
+    @UserMessage = @user.messages
+    @GroupMessage = @group.messages.includes(:user)
   end
 
   def create
-    @message = @group.messages.new(message_params)
-    if @message.save
+    @UserMessage = @user.messages.new(message_params)
+    if @UserMessage.save
       respond_to do |format|
         format.json
       end
     else
-      @messages = @group.messages.includes(:user)
+      @UserMessage = @user.messages.includes(:user)
+      flash.now[:alert] = 'メッセージを入力してください'
+      render :index
+    end
+    
+    @GroupMessage = @group.messages.new(message_params)
+    if @GroupMessage.save
+      respond_to do |format|
+        format.json
+      end
+    else
+      @GroupMessage = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください'
       render :index
     end
@@ -27,6 +40,10 @@ class MessagesController < ApplicationController
 
   def set_group
     @group = Group.find(params[:group_id])
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
 
 end

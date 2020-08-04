@@ -3,18 +3,22 @@
     グループ
     = link_to new_group_path, class: "member-add" do
       = icon('fas', 'plus-square', class: 'addition')
-      -# %span メンバーを追加する
   .side__groups
     - current_user.groups.each do |group|
-      .side__group
+      .groups
         = link_to group_messages_path(group), class: "group" do
           .group__name
             = group.name
           .group__message
             = group.show_last_message
-  .side__users
+  .side__user-lists
     フレンド
-    = link_to "#", class: "member-add" do
+    = link_to users_path, class: "member-add" do
       = icon('fas', 'plus-square', class: 'addition')
-  .side__user
-    -# = render 'users/index'
+  .side__users
+    .friends
+      = link_to user_messages_path, class: "friend" do
+        .friend__name
+
+        .friend__message
+        

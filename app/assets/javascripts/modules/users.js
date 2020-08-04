@@ -28,6 +28,15 @@ $(function(){
   $('.ChatMembers').append(html)
   }
 
+  function followUser(userName){
+    let html = `
+                <div class="friend__name">
+                  <p class="member__name">${userName}</p>
+                </div>
+                `;
+    $('.side__users').append(html);
+  }
+
   $("#UserSearch__field").on("keyup", function() {
     let input = $("#UserSearch__field").val();
     $.ajax({
@@ -61,5 +70,11 @@ $(function(){
   });
   $('.ChatMembers').on('click', '.member__remove', function(){
     $(this).parent().remove();
+  })
+
+  $('.user-add').on('click', function(){
+    $(this).parent().remove();
+      let userName = $(this).data('user-name')
+      followUser(userName)
   })
 });

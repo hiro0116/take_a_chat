@@ -6,5 +6,5 @@
     - @users.each do |user|
       %li.user-list
         = user.name
-        .add-btn
-          = link_to "追加する", :back, class: "user-add"
+        .add-btn{"data-user-name": user.name}
+          .user-add 追加する
