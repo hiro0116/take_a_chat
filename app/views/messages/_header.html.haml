@@ -5,10 +5,10 @@
     %h3.header__info__user-name
       = current_user.name
 
-  .header__search
-    %form{class: "search"}
-      %input{placeholder: "検索", class: "search__form" }
-      %input{type: "submit", value: "検索", class: "search__btn"}
+  -# .header__search
+  -#   %form{class: "search"}
+  -#     %input{placeholder: "検索", class: "search__form" }
+  -#     %input{type: "submit", value: "検索", class: "search__btn"}
 
   .header__icons
     = link_to edit_user_path(current_user), class: "header__icons__btn" do
