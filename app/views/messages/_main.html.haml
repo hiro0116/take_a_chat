@@ -5,9 +5,8 @@
         = @group.name
         .group__member
           Member : 
-          %ul
-            - @group.users.each do |user|
-              %li= user.name
+          = @group.users.length
+
       .chat-header__group__edit
         = link_to edit_group_path(@group), class: "edit" do
           = icon('fas', 'bars', class: "edit-btn")
