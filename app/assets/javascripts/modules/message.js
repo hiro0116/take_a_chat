@@ -1,19 +1,19 @@
 $(function(){
   function buildHTML(message){
-    if (message.img){
+    if (message.image){
       let html = `
-      <li class="chat-current" data-message-id="${message.id}">
-        <div class="chat-current__user">
+      <li class="chat" data-message-id="${message.id}">
+        <div class="chat__user">
           ${message.user_name}
         </div>
-        <div class="chat-current__comment">
-          <p class="chat-current__text">
+        <div class="chat__comment">
+          <p class="chat__text">
             ${message.text}
           </p>
-          <img class="chat-current__image" src="${message.image}">
+          <img class="chat__image" src="${message.image}" width="300" height="300">
         </div>
-        <div class="chat-current__day">
-          <div class="chat-current__day__time">
+        <div class="chat__day">
+          <div class="chat__day__time">
             ${message.created_at}
           </div>
         </div>
@@ -21,17 +21,17 @@ $(function(){
     return html;
     } else {
       let html =`
-      <li class="chat-current" data-message-id="${message.id}">
-        <div class="chat-current__user">
+      <li class="chat" data-message-id="${message.id}">
+        <div class="chat__user">
           ${message.user_name}
         </div>
-        <div class="chat-current__comment">
-          <p class="chat-current__text">
+        <div class="chat__comment">
+          <p class="chat__text">
             ${message.text}
           </p>
         </div>
-        <div class="chat-current__day">
-          <div class="chat-current__day__time">
+        <div class="chat__day">
+          <div class="chat__day__time">
             ${message.created_at}
           </div>
         </div>
@@ -39,6 +39,15 @@ $(function(){
     return html;
     }
   }
+
+  // function buildImg(image){
+  //   let html = `
+  //         <div class="form__message">
+  //           <input class="text" type="text" name="message[text]" id="message_text">
+  //         </div>`
+  //   return html;
+  // }
+
   $('.form').on('submit', function(e){
     e.preventDefault()
     let formData = new FormData(this)
@@ -63,4 +72,12 @@ $(function(){
       $('.send').prop("disabled", false);
     })
   })
+
+  // イメージプレビュー
+  // $( document ).on('change', '.file', function() {
+  //   let image = this.result;
+  //   let html = buildImg(image);
+  //   $('.text').append(html);
+    
+  // });
 });

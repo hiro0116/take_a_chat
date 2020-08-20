@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    if (message.img){
+    if (message.image){
       let html = `
             <li class="chat" data-message-id="${message.id}">
               <div class="chat__user">
@@ -10,7 +10,7 @@ $(function(){
                 <p class="chat__text">
                   ${message.text}
                 </p>
-                <img class="chat__image" src="${message.image}">
+                <img class="chat__image" src="${message.image}" width="300" height="300">
               </div>
               <div class="chat__day">
                 <div class="chat__day__time">
