@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    if (message.imga){
+    if (message.img){
       let html = `
         <div class="chat" data-message-id=${message.id}>
           <div class="chat__user">

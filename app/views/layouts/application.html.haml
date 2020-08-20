@@ -9,4 +9,7 @@
     = javascript_include_tag 'application'
   %body
     = render 'layouts/notifications'
+    = render 'messages/header'
+    .wrapper
+      = render 'messages/side'
     = yield

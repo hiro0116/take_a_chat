@@ -17,8 +17,9 @@
       = icon('fas', 'plus-square', class: 'addition')
   .side__users
     .friends
-      = link_to user_messages_path, class: "friend" do
-        .friend__name
-
-        .friend__message
-        
+      -# - user.name.each do |user|
+      -#   = link_to user_messages_path(user), class: "friend" do
+      -#     .friend__name
+      -#       = user.name
+      -#     .friend__message
+      -#       = user.message
