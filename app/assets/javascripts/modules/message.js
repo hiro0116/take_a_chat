@@ -2,18 +2,18 @@ $(function(){
   function buildHTML(message){
     if (message.img){
       let html = `
-      <li class="chat" data-message-id="${message.id}">
-        <div class="chat__user">
+      <li class="chat-current" data-message-id="${message.id}">
+        <div class="chat-current__user">
           ${message.user_name}
         </div>
-        <div class="chat__comment">
-          <p class="chat__text">
+        <div class="chat-current__comment">
+          <p class="chat-current__text">
             ${message.text}
           </p>
-          <img class="chat__image" src="${message.image}" width="100" height="100">
+          <img class="chat-current__image" src="${message.image}">
         </div>
-        <div class="chat__day">
-          <div class="chat__day__time">
+        <div class="chat-current__day">
+          <div class="chat-current__day__time">
             ${message.created_at}
           </div>
         </div>
@@ -21,17 +21,17 @@ $(function(){
     return html;
     } else {
       let html =`
-      <li class="chat" data-message-id="${message.id}">
-        <div class="chat__user">
+      <li class="chat-current" data-message-id="${message.id}">
+        <div class="chat-current__user">
           ${message.user_name}
         </div>
-        <div class="chat__comment">
-          <p class="chat__text">
+        <div class="chat-current__comment">
+          <p class="chat-current__text">
             ${message.text}
           </p>
         </div>
-        <div class="chat__day">
-          <div class="chat__day__time">
+        <div class="chat-current__day">
+          <div class="chat-current__day__time">
             ${message.created_at}
           </div>
         </div>
