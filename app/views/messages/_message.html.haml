@@ -5,18 +5,18 @@
     - if message.text.present?
       %p.chat__text
         = message.text
-    = image_tag message.image.url, class: 'chat__image' if message.image.present?
+    = image_tag message.image.url, size: "100x100", class: 'chat__image' if message.image.present?
   .chat__day
     .chat__day__time
       = message.created_at.strftime("%H:%M")
-%li.chat-current
-  .chat-current__user
-    = current_user.name
-  .chat-current__comment
-    - if message.text.present?
-      %p.chat__text
-        = message.text
-    = image_tag message.image.url, class: 'chat-current__image' if message.image.present?
-  .chat-current__day
-    .chat-current__day__time
-      = message.created_at.strftime("%H:%M")
+-# %li.chat-current
+-#   .chat-current__user
+-#     = current_user.name
+-#   .chat-current__comment
+-#     - if message.text.present?
+-#       %p.chat__text
+-#         = message.text
+-#     = image_tag message.image.url, class: 'chat-current__image' if message.image.present?
+-#   .chat-current__day
+-#     .chat-current__day__time
+-#       = message.created_at.strftime("%H:%M")

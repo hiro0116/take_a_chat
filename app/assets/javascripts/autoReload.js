@@ -10,7 +10,7 @@ $(function(){
                 <p class="chat__text">
                   ${message.text}
                 </p>
-                <img class="chat__image" src="${message.image}">
+                <img class="chat__image" src="${message.image}" width="100" height="100">
               </div>
               <div class="chat__day">
                 <div class="chat__day__time">
