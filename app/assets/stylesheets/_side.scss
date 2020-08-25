@@ -1,5 +1,5 @@
 .side {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   width: 300px;
   background-color: white;
   padding: 20px 10px;
@@ -21,6 +21,10 @@
         color: black;
         &__name {
         font-size: 18px;
+        display: flex;
+        &__member {
+          margin-left: 8px;
+        }
         }
         &__message {
           font-size: 13px;
