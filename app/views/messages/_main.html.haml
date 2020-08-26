@@ -3,12 +3,12 @@
     .chat-header__group
       .chat-header__group__name
         = @group.name
-        .group__member#membership
+        .group__member
           %span (
-          = @group.users.length
+          #membership
+            = @group.users.length
           %span )
         %ul.memberlists
-          %li
 
       .chat-header__group__edit
         = link_to edit_group_path(@group), class: "edit" do

@@ -1,9 +1,9 @@
 $(function(){
-  $('#membership').on('click', function(){
-    const users = $('.member__name').data('user.name');
+  $('.group__member').on('click', function(){
     const memberLists = document.createElement('li');
-    memberLists.innerText = users;
+
+    memberLists.innerText = "bob";
     console.log(memberLists);
-    $('.memberlists').append(memberLists);
+    // $('.memberlists').append(memberLists);
   });
 });
