@@ -1,7 +1,7 @@
 .main {
   background-color: #eeeeee;
   width: calc(100vw - 300px);
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   .chat-header {
     &__group {
       height: 40px;
@@ -13,18 +13,11 @@
       &__name {
         font-size: 25px;
         display: flex;
-        align-items: baseline;
         .group__member {
           display: flex;
-          font-size: 18px;
-          margin-left: 15px;
-          color: gray;
-          ul {
-            display: flex;
-            li {
-              margin: 0 5px;
-            }
-          }
+          font-size: 23px;
+          margin-left: 8px;
+          cursor: pointer;
         }
       }
       &__edit {
@@ -44,7 +37,7 @@
     }
   }
   .chat-log {
-    height: calc(100vh - 240px);
+    height: calc(100vh - 220px);
     width: 100%;
     padding-top: 20px;
     overflow: scroll;
